@@ -1,0 +1,21 @@
+
+cc_library(
+	name = "intrusive",
+	visibility = ["//visibility:public"],
+	includes = [
+		"include/",
+	],
+	hdrs = glob([
+		"include/boost/**/*.hpp",
+		"include/boost/**/*.ipp",
+	]),
+	srcs = [
+	],
+	defines = [
+	],
+	deps = [
+		"@com_github_bazelboost_config//:config",
+		"@com_github_bazelboost_assert//:assert",
+		"@com_github_bazelboost_move//:move"
+	],
+)
